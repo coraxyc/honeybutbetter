@@ -1,0 +1,44 @@
+{
+    "products": [
+        {
+            "productName": "Beyond Beef from Beyond Meat - Plant-Based Meat, Frozen, 16 oz (1 lb.) Package",
+            "description": "The freedom and versatility to turn any recipe into a meaty plant-based masterpiece.",
+            "originalPrice": 7.99,
+            "promoDescription": "Get 10% off your purchase",
+            "promoExpiration": 1611126930,
+            "link": "https://www.amazon.com/Beyond-Meat-Beef-16-Ounce/dp/B07R6TRHQ2/"
+        },
+        {
+            "productName": "Tiny Footprint Coffee - Fair Trade Organic Peru APU Medium Roast - Ground Coffee",
+            "description": "The world's first carbon negative coffee: For every pound that’s sold, we donate a portion of the proceeds to fund reforestation in Ecuador’s Mindo cloud forest. Over time, these trees will remove 54 lbs. of CO2 from the atmosphere as well as provide habitat for native plant and animal species.",
+            "originalPrice": 13.74,
+            "promoDescription": "Get 5% off your purchase",
+            "promoExpiration": 1611126930,
+            "link": "https://www.amazon.com/Tiny-Footprint-Coffee-Organic-Medium/dp/B009PIFCCO/"
+        },
+        {
+            "productName": "Natural Plant Based Scrub Sponge 12 Pack, Palm Fiber Scrubbing Sponge with Non Scratch Biodegradable Compostable Sponges,Durable No Smell Dishwashing Kitchen Scrubber",
+            "description": "Our kitchen sponges are made using natural palm fiber same like walnut scrubber and white cellulose cleaning sponge that offer powerful scrubbing to provide you with a natural, efficient and practical way to clean your home.",
+            "originalPrice": 15.99,
+            "promoDescription": "Get 10% off your purchase",
+            "promoExpiration": 1611126930,
+            "link": "https://www.amazon.com/dp/B07ZMX7LXJ/"
+        },
+        {
+            "productName": "Peace Coffee Guatemala Dark Roast (Guatemala Single Origin), Organic Fair Trade Coffee, Whole Bean 20 oz. Bag",
+            "description": "All Peace Coffees are organic, fair trade and sourced from small growers. Also certified by the B Lab to meet rigorous standards of social and environmental performance",
+            "originalPrice": 18.99,
+            "promoDescription": "Get 15% off your purchase",
+            "promoExpiration": 1611126930,
+            "link": "https://www.amazon.com/Peace-Coffee-Guatemala-Single-Organic/dp/B08C7BL1PC/"
+        },
+        {
+            "productName": "SF Bay Coffee OneCUP Assorted Variety Pack 80 Ct Compostable Coffee Pods, K Cup Compatible including Keurig 2.0",
+            "description": "This SF Bay OneCup variety pack features 4 of our lesser known but amazing coffee blends: Hazelnut (Flavored), Donut Shop, Colombian, Espresso Roast",
+            "originalPrice": 34.99,
+            "promoDescription": "Get 15% off your purchase",
+            "promoExpiration": 1611126930,
+            "link": "https://www.amazon.com/dp/B07NVT454B/"
+        }
+    ]
+}
