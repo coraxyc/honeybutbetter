@@ -1,0 +1,19 @@
+{
+    "name": "Honeycomb",
+    "description": "Save bees 🐝 don't let them bee homeless",
+    "version": "1.0",
+    "permissions": [
+        "activeTab"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://www.amazon.com/*"],
+            "css": ["styles.css"],
+            "js": ["script.js"]
+        }
+    ],
+    "browser_action": {
+        "default_title": "default?"
+    },
+    "manifest_version": 2
+}
