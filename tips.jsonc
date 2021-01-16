@@ -1,0 +1,37 @@
+{
+"coffee":[
+    {"description": "Coffee Availability is Diminishing Due to Global Warming", 
+    "source": "https://www.melissashealthyliving.com/coffee-and-climate-change/"},
+    {"description": "Fairtrade cannot solve the issue of climate change, but we do support farmers with tools, practices and resources to become more resilient", 
+    "source": "https://www.fairtradeamerica.org/why-fairtrade/explore-the-issues/climate-change/#:~:text=Climate%20studies%20predict%20that%20by,some%20areas%20will%20even%20disappear.&text=Fairtrade%20cannot%20solve%20the%20issue,resources%20to%20become%20more%20resilient."}],
+"cow, beef": [
+    {"description": "The agriculture sector is one of the world’s biggest sources of climate-altering gases.", 
+    "source": "https://www.washingtonpost.com/climate-solutions/2019/11/18/are-my-hamburgers-hurting-planet/"},
+    {"description": " Cows realease methane, and methane traps roughly 30 times more heat than carbon dioxide", 
+    "source": "https://letstalkscience.ca/educational-resources/stem-in-context/cows-methane-and-climate-change"}],
+"composting": [
+    {"description": "Composting enhances environmental resilience and climate adaptation by promoting plant growth, stabilizing soils, and reducing the impact of flooding and droughts.", 
+    "source": "https://unfccc.int/climate-action/momentum-for-change/planetary-health/composting-waste-treatment-an-ecological-solution-to-poverty-and-climate-change#:~:text=The%20compost%20that%20SOIL%20produces,dioxide%20out%20of%20the%20atmosphere."},
+    {"description": "America throws out immense amounts or trash, most of which is dumped into landfills or burned in trash incinerators. ", 
+    "source": "https://environmentamerica.org/reports/ame/composting-america"}],
+"plastic": [
+    {"description": "Pacific garbage patch has an area twice the size of Texas or three times the size of France", 
+    "source": "https://theoceancleanup.com/great-pacific-garbage-patch/#:~:text=The%20GPGP%20covers%20an%20estimated,times%20the%20size%20of%20France.&text=To%20formulate%20this%20number%2C%20the,elaborate%20sampling%20method%20ever%20coordinated."},
+    {"description": "Plastic generate heat-trapping gases at every stage of their life cycle.", 
+    "source": "https://yaleclimateconnections.org/2019/08/how-plastics-contribute-to-climate-change/"}],
+"biodegradable": [
+    {"description": "xxx", 
+    "source": "xxx"},
+    {"description": "xxx", 
+    "source": "xxx"}],
+"reusable": [
+    {"description": "xxx", 
+    "source": "xxx"},
+    {"description": "xxx", 
+    "source": "xxx"}],
+"recycle": [
+    {"description": "xxx", 
+    "source": "xxx"},
+    {"description": "xxx", 
+    "source": "xxx"}]
+}
