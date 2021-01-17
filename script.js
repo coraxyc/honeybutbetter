@@ -1,6 +1,7 @@
-async function buildSidebar(resData, funfact) {
+let keyword = "Coffee";
+
+async function buildSidebar(productList, funfact) {
     // get logo
-    let keyword = "Coffee";
     let whiteLogoURL = chrome.runtime.getURL('images/logo-white-27x27.svg');
     let blackLogoURL = chrome.runtime.getURL('images/logo-black-27x27.svg');
     let sidebarUrl = chrome.runtime.getURL('sidebar.html');
@@ -10,13 +11,39 @@ async function buildSidebar(resData, funfact) {
     mainButtonHTML.getElementsByClassName('logo-with-name')[0].firstChild.nextSibling.setAttribute('src', blackLogoURL);
     
     // display matching products
-    var productItems = mainButtonHTML.getElementsByClassName('product-item');
-    for(let i = 0; i < productItems.length; i++) {
-        productItems[i].firstChild.nextSibling.setAttribute('src', resData.image);
-        productItems[i].getElementsByClassName('a-text')[0].innerText = resData.title.slice(0, 50) + '...';
-        productItems[i].getElementsByTagName('b')[0].innerText = resData.price;
-        productItems[i].getElementsByClassName('a-icon-alt')[0].innerText = resData.rating;
+    var productItemsHTML = '';
+    if (productList.length === 0) {
+        productItemsHTML = 'No products found.';
+        return;
+    } 
+
+    for(let i = 0; i < productList.length; i++) {
+        res = productList[i];
+        console.log(res);
+        productItemsHTML = `${productItemsHTML}
+        <div class="product-item">
+            <img src="${res.image}" style="height: 150px"/>
+            <div class="description">
+                <p class="a-text">${res.title.slice(0, 50) + '...'}</p>
+                <p>
+                    <b>${res.price}</b>
+                    <span 
+                        class="a-icon a-icon-prime" 
+                        role="img" 
+                        aria-label="Free Shipping for Prime Members">
+                    </span>
+                </p>
+                <div class="a-rating">
+                    <i class="a-icon a-icon-star a-star-4-5">
+                        <span class="a-icon-alt">${res.rating}</span>
+                    </i>
+                </div>
+            </div>
+        </div>
+        `
     }
+    
+    mainButtonHTML.getElementsByClassName('row')[0].innerHTML = productItemsHTML;
 
     // display keyword and fun facts
     mainButtonHTML.getElementsByClassName('keyword')[0].innerText = keyword;
@@ -43,19 +70,38 @@ async function getSponsoredProductFromUrl(url) {
     return data;
 }
 
+async function getProductLinksByKeyword(keyword) {
+    let productsURL = chrome.runtime.getURL('products.json');
+    let productData = {};
+    await fetch(productsURL).then(res => res.json()).then(data => productData = data);
+    return productData[keyword].reduce((acc, x) => {console.log(x.link); return [...acc, x.link];}, []);
+}
+
 let mainButtonHTML = document.createElement('div');
 let currURL = window.location.toString();
+
 let funFacts = {}
 
 getRandomFunFact().then(
     res => {funFacts = res}
 );
 
-getSponsoredProductFromUrl(currURL).then(
-    res => { 
-        buildSidebar(res, funFacts);
+let products = []
+getProductLinksByKeyword(keyword).then(
+    res => {
+        products = res.reduce((acc, x) => [...acc, getSponsoredProductFromUrl(x)], [])
     }
-);
+).then(
+    () => {
+        Promise.all(products).then(
+            (res) => {
+                buildSidebar(res, funFacts);
+            }
+        );
+    }
+)
+
+
 
 
 document.getElementById('price')

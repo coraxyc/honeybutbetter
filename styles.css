@@ -6,7 +6,7 @@
 #honeycomb .container {
     border-radius: 6px 0px 0px 6px;
     position: fixed;
-    top: 15%;
+    top: 20%;
     bottom: unset;
     right: 0px;
     transform: translate(0px, 0px);
@@ -45,7 +45,6 @@
     background-color: white;
     padding: 15px;
 }
-
 
 #honeycomb .container .hoverable {
     visibility: hidden;
@@ -109,7 +108,7 @@
 
 .product-item {
     display: inline-block;
-    height: auto;
+    height: 100%;
     width: 175px;
     margin: 5px;
     background-color: white;
@@ -117,7 +116,6 @@
     border: 1px solid #E9E9E9;
     box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.10);
     padding: 10px;
-    margin-bottom: 18px;
 }
 
 .product-item .description {
