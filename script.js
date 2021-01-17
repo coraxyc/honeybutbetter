@@ -57,7 +57,6 @@ getSponsoredProductFromUrl(currURL).then(
     }
 );
 
-
 document.getElementById('price')
     .insertAdjacentElement(
         'beforebegin', 
