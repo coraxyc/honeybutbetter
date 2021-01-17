@@ -6,19 +6,12 @@ async function buildSidebar(resData) {
     let mainButtonHTML = document.createElement('div');
     mainButtonHTML.setAttribute('id', 'honeycomb');
     await fetch(sidebarUrl).then(res=>res.text()).then(data=> mainButtonHTML.innerHTML = data);
-    /*let resData = {
-        'title': 'Test',
-        'image': 'https://images-na.ssl-images-amazon.com/images/I/81%2BHtDnUzyL._AC_SX466_.jpg',
-        'rating': '4.9/5',
-        'price': 13.99,
-        'url': 'https://www.example.com'
-    }*/
     mainButtonHTML.getElementsByClassName('container')[0].firstChild.nextSibling.setAttribute('src', whiteLogoURL);
     mainButtonHTML.getElementsByClassName('logo-with-name')[0].firstChild.nextSibling.setAttribute('src', blackLogoURL);
     var productItems = mainButtonHTML.getElementsByClassName('product-item');
     for(let i = 0; i < productItems.length; i++) {
         productItems[i].firstChild.nextSibling.setAttribute('src', resData.image);
-        productItems[i].getElementsByClassName('a-text')[0].innerText = resData.url;
+        productItems[i].getElementsByClassName('a-text')[0].innerText = resData.title.slice(0, 50) + '...';
         productItems[i].getElementsByTagName('b')[0].innerText = resData.price;
         productItems[i].getElementsByClassName('a-icon-alt')[0].innerText = resData.rating;
     }
