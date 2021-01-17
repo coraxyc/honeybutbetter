@@ -1,8 +1,8 @@
 {
 "coffee":[
-    {"description": "Coffee Availability is Diminishing Due to Global Warming", 
+    {"description": "Coffee availability is diminishing due to global warming.", 
     "source": "https://www.melissashealthyliving.com/coffee-and-climate-change/"},
-    {"description": "Fairtrade cannot solve the issue of climate change, but we do support farmers with tools, practices and resources to become more resilient", 
+    {"description": "Fairtrade cannot solve the issue of climate change, but it does support farmers with tools, practices and resources to become more resilient.", 
     "source": "https://www.fairtradeamerica.org/why-fairtrade/explore-the-issues/climate-change/"}],
 "cow": [
     {"description": "The agriculture sector is one of the world’s biggest sources of climate-altering gases.", 
@@ -20,7 +20,7 @@
     {"description": "America throws out immense amounts or trash, most of which is dumped into landfills or burned in trash incinerators. ", 
     "source": "https://environmentamerica.org/reports/ame/composting-america"}],
 "plastic": [
-    {"description": "Pacific garbage patch has an area twice the size of Texas or three times the size of France", 
+    {"description": "Pacific garbage patch has an area twice the size of Texas or three times the size of France.", 
     "source": "https://theoceancleanup.com/great-pacific-garbage-patch"},
     {"description": "Plastic generate heat-trapping gases at every stage of their life cycle.", 
     "source": "https://yaleclimateconnections.org/2019/08/how-plastics-contribute-to-climate-change/"}],

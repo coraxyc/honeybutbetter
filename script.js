@@ -11,6 +11,11 @@ async function getSponsoredProductFromUrl(url) {
     return data;
 }
 
+let keyword = "Coffee";
+let funfact = {
+    "description": "Coffee Availability is Diminishing Due to Global Warming",
+    "source" : "https://www.fairtradeamerica.org/why-fairtrade/explore-the-issues/climate-change/"
+}
 let whiteLogoURL = chrome.runtime.getURL('images/logo-white-27x27.svg');
 let blackLogoURL = chrome.runtime.getURL('images/logo-black-27x27.svg');
 let mainButtonHTML = document.createElement('div');
@@ -36,7 +41,7 @@ getSponsoredProductFromUrl(currURL).then(
                     </div>
                     <div class="body">
                         <div class="product-suggestions">
-                            <h1>Greener Alternatives</h1>
+                        <h1><span style="color: #149800; font-weight: bold;">Greener Alternatives</span> for <i>${keyword}</i></h1>
                             <div class="carousel">
                                 <div class="row">
                                     <div class="product-item">
@@ -97,6 +102,11 @@ getSponsoredProductFromUrl(currURL).then(
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="fun-facts">
+                                <h1><b>Green Fun Facts</b></h1>
+                                <p>${funfact.description}</p>
+                                <a href="${funfact.source}">Source</a>
                             </div>
                         </div>
                     </div>
