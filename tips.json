@@ -1,42 +1,46 @@
 {
-"coffee":[
-    {"description": "Coffee Availability is Diminishing Due to Global Warming", 
-    "source": "https://www.melissashealthyliving.com/coffee-and-climate-change/"},
-    {"description": "Fairtrade cannot solve the issue of climate change, but we do support farmers with tools, practices and resources to become more resilient", 
-    "source": "https://www.fairtradeamerica.org/why-fairtrade/explore-the-issues/climate-change/"}],
-"cow": [
-    {"description": "The agriculture sector is one of the world’s biggest sources of climate-altering gases.", 
-    "source": "https://www.washingtonpost.com/climate-solutions/2019/11/18/are-my-hamburgers-hurting-planet/"},
-    {"description": " Cows realease methane, and methane traps roughly 30 times more heat than carbon dioxide", 
-    "source": "https://letstalkscience.ca/educational-resources/stem-in-context/cows-methane-and-climate-change"}],
-"beef": [
-        {"description": "The agriculture sector is one of the world’s biggest sources of climate-altering gases.", 
-        "source": "https://www.washingtonpost.com/climate-solutions/2019/11/18/are-my-hamburgers-hurting-planet/"},
-        {"description": " Cows realease methane, and methane traps roughly 30 times more heat than carbon dioxide", 
-        "source": "https://letstalkscience.ca/educational-resources/stem-in-context/cows-methane-and-climate-change"}],
-"composting": [
-    {"description": "Composting enhances environmental resilience and climate adaptation by promoting plant growth, stabilizing soils, and reducing the impact of flooding and droughts.", 
-    "source": "https://unfccc.int/climate-action/momentum-for-change/planetary-health/composting-waste-treatment-an-ecological-solution-to-poverty-and-climate-change"},
-    {"description": "America throws out immense amounts or trash, most of which is dumped into landfills or burned in trash incinerators. ", 
-    "source": "https://environmentamerica.org/reports/ame/composting-america"}],
-"plastic": [
-    {"description": "Pacific garbage patch has an area twice the size of Texas or three times the size of France", 
-    "source": "https://theoceancleanup.com/great-pacific-garbage-patch"},
-    {"description": "Plastic generate heat-trapping gases at every stage of their life cycle.", 
-    "source": "https://yaleclimateconnections.org/2019/08/how-plastics-contribute-to-climate-change/"}],
-"biodegradable": [
-    {"description": "Bioplastic might not be biodegradable, and biodegradable plastic might not be bioplastic.", 
-    "source": "https://ensia.com/features/bioplastics-bio-based-biodegradable-environment/"},
-    {"description": "Biodegradable plastic needs conditional enviorment to degrade. ", 
-    "source": "https://ensia.com/features/bioplastics-bio-based-biodegradable-environment/"}],
-"reusable": [
-    {"description": "With every item you recycle or reuse, you help reduce greenhouse gases and protect the climate.", 
-    "source": "https://www.stopwaste.org/at-work/reduce-and-reuse/recycling-business-waste/recycling-and-climate-protection"},
-    {"description": "Every disposable plastic bag that ends up in the ocean or countryside is a danger to fish, birds and mammals. Use reusable bags.", 
-    "source": "https://plastic.education/how-do-reusable-bags-help-the-environment/"}],
-"recycle": [
-    {"description": "Waste prevention and recycling decrease the need to extract \"virgin\" resources from forests, oil reserves and mines, to make products and packaging.", 
-    "source": "https://www.stopwaste.org/at-work/reduce-and-reuse/recycling-business-waste/recycling-and-climate-protection"},
-    {"description": "Recycling helps reduce greenhouse gas emissions by reducing energy consumption.", 
-    "source": "https://kingcounty.gov/depts/dnrp/solid-waste/programs/climate/climate-change-recycling.aspx"}]
+    "allKeywords": ["coffee", "cow", "beef", "composting", "plastic", "biodegradable", "reusable", "recycle"],
+    "keywords": {
+        "coffee":[
+            {"description": "Coffee Availability is Diminishing Due to Global Warming", 
+            "source": "https://www.melissashealthyliving.com/coffee-and-climate-change/"},
+            {"description": "Fairtrade cannot solve the issue of climate change, but we do support farmers with tools, practices and resources to become more resilient", 
+            "source": "https://www.fairtradeamerica.org/why-fairtrade/explore-the-issues/climate-change/"}],
+        "cow": [
+            {"description": "The agriculture sector is one of the world’s biggest sources of climate-altering gases.", 
+            "source": "https://www.washingtonpost.com/climate-solutions/2019/11/18/are-my-hamburgers-hurting-planet/"},
+            {"description": " Cows realease methane, and methane traps roughly 30 times more heat than carbon dioxide", 
+            "source": "https://letstalkscience.ca/educational-resources/stem-in-context/cows-methane-and-climate-change"}],
+        "beef": [
+                {"description": "The agriculture sector is one of the world’s biggest sources of climate-altering gases.", 
+                "source": "https://www.washingtonpost.com/climate-solutions/2019/11/18/are-my-hamburgers-hurting-planet/"},
+                {"description": " Cows realease methane, and methane traps roughly 30 times more heat than carbon dioxide", 
+                "source": "https://letstalkscience.ca/educational-resources/stem-in-context/cows-methane-and-climate-change"}],
+        "composting": [
+            {"description": "Composting enhances environmental resilience and climate adaptation by promoting plant growth, stabilizing soils, and reducing the impact of flooding and droughts.", 
+            "source": "https://unfccc.int/climate-action/momentum-for-change/planetary-health/composting-waste-treatment-an-ecological-solution-to-poverty-and-climate-change"},
+            {"description": "America throws out immense amounts or trash, most of which is dumped into landfills or burned in trash incinerators. ", 
+            "source": "https://environmentamerica.org/reports/ame/composting-america"}],
+        "plastic": [
+            {"description": "Pacific garbage patch has an area twice the size of Texas or three times the size of France", 
+            "source": "https://theoceancleanup.com/great-pacific-garbage-patch"},
+            {"description": "Plastic generate heat-trapping gases at every stage of their life cycle.", 
+            "source": "https://yaleclimateconnections.org/2019/08/how-plastics-contribute-to-climate-change/"}],
+        "biodegradable": [
+            {"description": "Bioplastic might not be biodegradable, and biodegradable plastic might not be bioplastic.", 
+            "source": "https://ensia.com/features/bioplastics-bio-based-biodegradable-environment/"},
+            {"description": "Biodegradable plastic needs conditional enviorment to degrade. ", 
+            "source": "https://ensia.com/features/bioplastics-bio-based-biodegradable-environment/"}],
+        "reusable": [
+            {"description": "With every item you recycle or reuse, you help reduce greenhouse gases and protect the climate.", 
+            "source": "https://www.stopwaste.org/at-work/reduce-and-reuse/recycling-business-waste/recycling-and-climate-protection"},
+            {"description": "Every disposable plastic bag that ends up in the ocean or countryside is a danger to fish, birds and mammals. Use reusable bags.", 
+            "source": "https://plastic.education/how-do-reusable-bags-help-the-environment/"}],
+        "recycle": [
+            {"description": "Waste prevention and recycling decrease the need to extract \"virgin\" resources from forests, oil reserves and mines, to make products and packaging.", 
+            "source": "https://www.stopwaste.org/at-work/reduce-and-reuse/recycling-business-waste/recycling-and-climate-protection"},
+            {"description": "Recycling helps reduce greenhouse gas emissions by reducing energy consumption.", 
+            "source": "https://kingcounty.gov/depts/dnrp/solid-waste/programs/climate/climate-change-recycling.aspx"}
+        ]
+    }
 }
