@@ -4,8 +4,7 @@
 }
 
 #honeycomb .container {
-    background: linear-gradient(90deg, #159800 0%, #31BD1A 100%);
-    border-radius: 6px 0px 0px 8px;
+    border-radius: 6px 0px 0px 6px;
     position: fixed;
     top: 15%;
     bottom: unset;
@@ -13,8 +12,40 @@
     transform: translate(0px, 0px);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     z-index: 2147483647;
+    margin: 0;
+    margin-right: -168px;
+    padding: 0 !important;
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+    transition: margin-right 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    animation-name: fade-in;
+    animation-duration: 5s;
+    /* animation-timing-function: ease-in-out; */
+    animation-iteration-count: 1;
+}
+
+@keyframes fade-in {
+    0% { margin-right: -168px; }
+    25% { margin-right: 0px; }
+    75% { margin-right: 0px; }
+    100% { margin-right: -168px; }
+}
+
+#honeycomb .container .fixed-button {
+    border-radius: 6px 0px 0px 6px;
+    background: linear-gradient(90deg, #159800 0%, #31BD1A 100%);
     padding: 15px;
 }
+
+#honeycomb .container .expandable {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 15px;
+}
+
 
 #honeycomb .container .hoverable {
     visibility: hidden;
@@ -31,6 +62,7 @@
     box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.25);
     transition: opacity 0.3s;
     align-items: center;
+    margin-right: 150px;
 }
 
 #honeycomb .container:hover .hoverable {
@@ -61,8 +93,8 @@
 .body {
     padding: 16px;
     padding-right: 0px;
-    padding-bottom: 32px;
-    height: 600px;
+    padding-bottom: 18px;
+    height: 550px;
     overflow-y: auto;
 }
 
@@ -85,6 +117,7 @@
     border: 1px solid #E9E9E9;
     box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.10);
     padding: 10px;
+    margin-bottom: 18px;
 }
 
 .product-item .description {
@@ -111,3 +144,4 @@
     white-space: normal;
     border: 1px solid #149800;
 }
+
