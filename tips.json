@@ -4,11 +4,16 @@
     "source": "https://www.melissashealthyliving.com/coffee-and-climate-change/"},
     {"description": "Fairtrade cannot solve the issue of climate change, but we do support farmers with tools, practices and resources to become more resilient", 
     "source": "https://www.fairtradeamerica.org/why-fairtrade/explore-the-issues/climate-change/"}],
-"cow, beef": [
+"cow": [
     {"description": "The agriculture sector is one of the world’s biggest sources of climate-altering gases.", 
     "source": "https://www.washingtonpost.com/climate-solutions/2019/11/18/are-my-hamburgers-hurting-planet/"},
     {"description": " Cows realease methane, and methane traps roughly 30 times more heat than carbon dioxide", 
     "source": "https://letstalkscience.ca/educational-resources/stem-in-context/cows-methane-and-climate-change"}],
+"beef": [
+        {"description": "The agriculture sector is one of the world’s biggest sources of climate-altering gases.", 
+        "source": "https://www.washingtonpost.com/climate-solutions/2019/11/18/are-my-hamburgers-hurting-planet/"},
+        {"description": " Cows realease methane, and methane traps roughly 30 times more heat than carbon dioxide", 
+        "source": "https://letstalkscience.ca/educational-resources/stem-in-context/cows-methane-and-climate-change"}],
 "composting": [
     {"description": "Composting enhances environmental resilience and climate adaptation by promoting plant growth, stabilizing soils, and reducing the impact of flooding and droughts.", 
     "source": "https://unfccc.int/climate-action/momentum-for-change/planetary-health/composting-waste-treatment-an-ecological-solution-to-poverty-and-climate-change"},
