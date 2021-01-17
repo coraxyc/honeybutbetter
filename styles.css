@@ -21,7 +21,6 @@
     transition: margin-right 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
     animation-name: fade-in;
     animation-duration: 5s;
-    /* animation-timing-function: ease-in-out; */
     animation-iteration-count: 1;
 }
 
@@ -47,7 +46,6 @@
 }
 
 #honeycomb .container .hoverable {
-    visibility: hidden;
     width: 325px;
     height: auto;
     background-color: white;
@@ -59,14 +57,15 @@
     margin-left: -60px;
     opacity: 0;
     box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.25);
-    transition: opacity 0.3s;
+    transition: opacity 0.5s;
     align-items: center;
     margin-right: 150px;
 }
 
-#honeycomb .container:hover .hoverable {
+.show {
     visibility: visible;
-    opacity: 1;
+    opacity: 1!important;
+    transition: opacity 0.5s;
 }
 
 .header {
@@ -77,6 +76,10 @@
     padding: 16px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 100000;
+}
+
+.header span:hover {
+    cursor: pointer;
 }
 
 .logo-with-name {

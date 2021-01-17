@@ -1,5 +1,17 @@
 let keyword = "Coffee";
 
+var closeHoneycomb = function() {
+    if (document.getElementsByClassName('hoverable')[0].classList.contains('show')) {
+        document.getElementsByClassName('hoverable')[0].className = 'hoverable';
+    }
+};
+
+var showHoneycomb = function() {
+    console.log
+    document.getElementsByClassName('hoverable')[0].className = 'show hoverable';
+};
+
+
 async function buildSidebar(productList, funfact) {
     // get logo
     let whiteLogoURL = chrome.runtime.getURL('images/logo-white-27x27.svg');
@@ -44,7 +56,10 @@ async function buildSidebar(productList, funfact) {
     }
     
     mainButtonHTML.getElementsByClassName('row')[0].innerHTML = productItemsHTML;
+    mainButtonHTML.getElementsByClassName('logo-with-name')[0].nextElementSibling.addEventListener('click', closeHoneycomb);
 
+    mainButtonHTML.addEventListener('mouseenter', showHoneycomb);
+    mainButtonHTML.addEventListener('mouseleave', closeHoneycomb);
     // display keyword and fun facts
     mainButtonHTML.getElementsByClassName('keyword')[0].innerText = keyword;
     mainButtonHTML.getElementsByClassName('fun-fact-description')[0].innerText = funfact.description;
@@ -54,6 +69,7 @@ async function buildSidebar(productList, funfact) {
             'beforebegin', 
             mainButtonHTML
     );
+
 }
 
 async function getSponsoredProductFromUrl(url) {
@@ -100,7 +116,6 @@ getProductLinksByKeyword(keyword).then(
         );
     }
 )
-
 
 
 
