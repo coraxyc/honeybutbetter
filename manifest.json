@@ -9,12 +9,12 @@
         {
             "matches": ["https://www.amazon.com/*"],
             "css": ["styles.css"],
-            "js": ["script.js"]
+            "js": [ "Athena_FunFact.js", "script.js"]
         }
     ],
     "browser_action": {
         "default_title": "default?"
     },
-    "web_accessible_resources": ["images/logo-white-27x27.svg", "images/logo-black-27x27.svg", "sidebar.html"],
+    "web_accessible_resources": ["images/logo-white-27x27.svg", "images/logo-black-27x27.svg", "sidebar.html", "tips.json", "products.json"],
     "manifest_version": 2
 }

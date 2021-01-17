@@ -1,11 +1,6 @@
-async function buildSidebar(resData) {
+async function buildSidebar(resData, funfact) {
     // get logo
     let keyword = "Coffee";
-    let funfact = {
-        "description": "Coffee availability is diminishing due to global warming.",
-        "source" : "https://www.fairtradeamerica.org/why-fairtrade/explore-the-issues/climate-change/"
-    }
-    
     let whiteLogoURL = chrome.runtime.getURL('images/logo-white-27x27.svg');
     let blackLogoURL = chrome.runtime.getURL('images/logo-black-27x27.svg');
     let sidebarUrl = chrome.runtime.getURL('sidebar.html');
@@ -14,6 +9,7 @@ async function buildSidebar(resData) {
     mainButtonHTML.getElementsByClassName('fixed-button')[0].firstChild.nextSibling.setAttribute('src', whiteLogoURL);
     mainButtonHTML.getElementsByClassName('logo-with-name')[0].firstChild.nextSibling.setAttribute('src', blackLogoURL);
     
+    // display matching products
     var productItems = mainButtonHTML.getElementsByClassName('product-item');
     for(let i = 0; i < productItems.length; i++) {
         productItems[i].firstChild.nextSibling.setAttribute('src', resData.image);
@@ -22,6 +18,7 @@ async function buildSidebar(resData) {
         productItems[i].getElementsByClassName('a-icon-alt')[0].innerText = resData.rating;
     }
 
+    // display keyword and fun facts
     mainButtonHTML.getElementsByClassName('keyword')[0].innerText = keyword;
     mainButtonHTML.getElementsByClassName('fun-fact-description')[0].innerText = funfact.description;
     mainButtonHTML.getElementsByClassName('fun-fact-source')[0].setAttribute('href', funfact.source);
@@ -31,10 +28,6 @@ async function buildSidebar(resData) {
             mainButtonHTML
     );
 }
-
-var div=document.createElement("div"); 
-document.body.appendChild(div); 
-div.innerText="test123";
 
 async function getSponsoredProductFromUrl(url) {
     var sponsoredProductHtml = '';
@@ -52,10 +45,17 @@ async function getSponsoredProductFromUrl(url) {
 
 let mainButtonHTML = document.createElement('div');
 let currURL = window.location.toString();
+let funFacts = {}
+
+getRandomFunFact().then(
+    res => {funFacts = res}
+);
+
 getSponsoredProductFromUrl(currURL).then(
     res => { 
-        buildSidebar(res);
-    });
+        buildSidebar(res, funFacts);
+    }
+);
 
 
 document.getElementById('price')
