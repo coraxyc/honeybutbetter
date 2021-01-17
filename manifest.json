@@ -9,7 +9,7 @@
         {
             "matches": ["https://www.amazon.com/*"],
             "css": ["styles.css"],
-            "js": ["script.js", "Athena_FunFact.js"]
+            "js": [ "Athena_FunFact.js", "script.js"]
         }
     ],
     "browser_action": {

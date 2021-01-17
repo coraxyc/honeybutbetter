@@ -11,5 +11,3 @@ async function getRandomFunFact() {
     let funFactId = Math.floor(Math.random() * funFactsFile.keywords[keyword].length);
     return funFactsFile.keywords[keyword][funFactId];
 }
-
-getRandomFunFact().then(res => console.log(`${res['description']}\nSource: ${res['source']}`));
