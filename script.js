@@ -1,3 +1,5 @@
+// get logo
+let logoUrl = chrome.runtime.getURL('logo.svg');
 let mainButtonHTML = document.createElement('div');
 mainButtonHTML.setAttribute('id', 'honeycomb');
 mainButtonHTML.innerHTML = 
@@ -11,6 +13,7 @@ mainButtonHTML.innerHTML =
         <span class='hoverable'>
             <div class="header">
                 <div class="logo-with-name">
+                    <img src="` + logoUrl + `" />
                     <svg width="27" height="31" viewBox="0 0 27 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 2.86603C12.9282 2.33013 14.0718 2.33013 15 2.86603L23.6913 7.88397C24.6195 8.41987 25.1913 9.41025 25.1913 10.4821V20.5179C25.1913 21.5897 24.6195 22.5801 23.6913 23.116L15 28.134C14.0718 28.6699 12.9282 28.6699 12 28.134L3.30866 23.116C2.38045 22.5801 1.80866 21.5897 1.80866 20.5179V10.4821C1.80866 9.41025 2.38045 8.41987 3.30866 7.88397L12 2.86603Z" fill="white" stroke="black" stroke-width="3"/>
                         <path d="M10.1043 13.041C7.94835 14.4443 7.5679 17.3783 8.07518 18.3988C8.58246 19.4193 11.0301 20.695 13.6553 19.5469C16.2805 18.3988 20.25 11 20.25 11C20.25 11 12.2603 11.6378 10.1043 13.041Z" fill="black"/>
@@ -34,7 +37,7 @@ mainButtonHTML.innerHTML =
             </div>
         </span>
     </div>
-`
+`;
 
 document.getElementById('price')
     .insertAdjacentElement(
@@ -45,12 +48,10 @@ var div=document.createElement("div");
 document.body.appendChild(div); 
 div.innerText="test123";
 
-console.log('inserting');
 var testdiv = document.createElement('div');
 testdiv.setAttribute('id', 'honeycomb');
 testdiv.innerHTML = "injected!!!";
 document.getElementById('price').insertAdjacentElement('beforebegin', testdiv);
-console.log('done inserting!');
 
 async function getSponsoredProductFromUrl(url) {
     var sponsoredProductHtml = '';
@@ -63,7 +64,6 @@ async function getSponsoredProductFromUrl(url) {
     data['image'] = sponsoredProductElement.getElementById('imgTagWrapperId').firstChild.nextSibling.getAttribute('src').trim();
     data['price'] = sponsoredProductElement.getElementById('priceblock_saleprice') ? sponsoredProductElement.getElementById('priceblock_saleprice').innerText : sponsoredProductElement.getElementById('priceblock_ourprice').innerText;
     data['rating'] = sponsoredProductElement.getElementById('acrPopover').innerText.trim();
-    console.log(data);
 }
 
 // test: remove this line of code before publishing
