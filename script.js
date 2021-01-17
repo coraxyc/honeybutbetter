@@ -20,6 +20,7 @@ async function buildSidebar(resData, funfact) {
 
     // display keyword and fun facts
     mainButtonHTML.getElementsByClassName('keyword')[0].innerText = keyword;
+    console.log(funfact);
     mainButtonHTML.getElementsByClassName('fun-fact-description')[0].innerText = funfact.description;
     mainButtonHTML.getElementsByClassName('fun-fact-source')[0].setAttribute('href', funfact.source);
     document.getElementById('price')
@@ -47,7 +48,7 @@ let mainButtonHTML = document.createElement('div');
 let currURL = window.location.toString();
 let funFacts = {}
 
-getRandomFunFact().then(
+findCategory().then(
     res => {funFacts = res}
 );
 
