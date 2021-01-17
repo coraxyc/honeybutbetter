@@ -6,7 +6,7 @@ async function buildSidebar(resData, funfact) {
     let sidebarUrl = chrome.runtime.getURL('sidebar.html');
     let mainButtonHTML = document.createElement('div');
     await fetch(sidebarUrl).then(res=>res.text()).then(data=> mainButtonHTML.innerHTML = data);
-    mainButtonHTML.getElementsByClassName('container')[0].firstChild.nextSibling.setAttribute('src', whiteLogoURL);
+    mainButtonHTML.getElementsByClassName('fixed-button')[0].firstChild.nextSibling.setAttribute('src', whiteLogoURL);
     mainButtonHTML.getElementsByClassName('logo-with-name')[0].firstChild.nextSibling.setAttribute('src', blackLogoURL);
     
     // display matching products
