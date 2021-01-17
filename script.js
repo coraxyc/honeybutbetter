@@ -1,13 +1,19 @@
 async function buildSidebar(resData) {
     // get logo
+    let keyword = "Coffee";
+    let funfact = {
+        "description": "Coffee availability is diminishing due to global warming.",
+        "source" : "https://www.fairtradeamerica.org/why-fairtrade/explore-the-issues/climate-change/"
+    }
+    
     let whiteLogoURL = chrome.runtime.getURL('images/logo-white-27x27.svg');
     let blackLogoURL = chrome.runtime.getURL('images/logo-black-27x27.svg');
     let sidebarUrl = chrome.runtime.getURL('sidebar.html');
     let mainButtonHTML = document.createElement('div');
-    mainButtonHTML.setAttribute('id', 'honeycomb');
     await fetch(sidebarUrl).then(res=>res.text()).then(data=> mainButtonHTML.innerHTML = data);
     mainButtonHTML.getElementsByClassName('container')[0].firstChild.nextSibling.setAttribute('src', whiteLogoURL);
     mainButtonHTML.getElementsByClassName('logo-with-name')[0].firstChild.nextSibling.setAttribute('src', blackLogoURL);
+    
     var productItems = mainButtonHTML.getElementsByClassName('product-item');
     for(let i = 0; i < productItems.length; i++) {
         productItems[i].firstChild.nextSibling.setAttribute('src', resData.image);
@@ -16,6 +22,9 @@ async function buildSidebar(resData) {
         productItems[i].getElementsByClassName('a-icon-alt')[0].innerText = resData.rating;
     }
 
+    mainButtonHTML.getElementsByClassName('keyword')[0].innerText = keyword;
+    mainButtonHTML.getElementsByClassName('fun-fact-description')[0].innerText = funfact.description;
+    mainButtonHTML.getElementsByClassName('fun-fact-source')[0].setAttribute('href', funfact.source);
     document.getElementById('price')
         .insertAdjacentElement(
             'beforebegin', 
@@ -40,7 +49,6 @@ async function getSponsoredProductFromUrl(url) {
     data['url'] = url;
     return data;
 }
-
 
 let mainButtonHTML = document.createElement('div');
 let currURL = window.location.toString();
