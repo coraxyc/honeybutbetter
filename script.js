@@ -23,9 +23,9 @@ async function getSponsoredProductFromUrl(url) {
     let sponsoredProductElement = parser.parseFromString(sponsoredProductHtml, 'text/html');
     // console.log(sponsoredProductElement);
     data['title'] = sponsoredProductElement.getElementById('productTitle').innerText.trim();
-    data['image'] = sponsoredProductElement.getElementById('imgTagWrapperId').firstChild.nextSibling.getAttribute('src');
+    data['image'] = sponsoredProductElement.getElementById('imgTagWrapperId').firstChild.nextSibling.getAttribute('src').trim();
     data['price'] = sponsoredProductElement.getElementById('priceblock_saleprice') ? sponsoredProductElement.getElementById('priceblock_saleprice').innerText : sponsoredProductElement.getElementById('priceblock_ourprice').innerText;
-    data['trim'] = sponsoredProductElement.getElementById('acrPopover').innerText.trim();
+    data['rating'] = sponsoredProductElement.getElementById('acrPopover').innerText.trim();
     console.log(data);
 }
 
